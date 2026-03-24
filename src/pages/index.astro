@@ -268,28 +268,53 @@ import Carousel from '../components/Carousel.astro';
   <section class="section offer-section reveal" style="transition-delay:.1s">
     <div class="section-tag">Oferta</div>
     <h2 class="section-title">Comece hoje. Sinta a diferença no jogo.</h2>
-    <p class="section-sub">Método Goleiro 2.0 — acesso completo ao método por R$97. Pagamento único.</p>
+    <p class="section-sub">Escolha o plano ideal para o seu momento.</p>
 
-    <div class="offer-card">
-      <div class="offer-name">PLANO STARTER</div>
-      <div class="offer-price-row">
-        <span class="offer-currency">R$</span>
-        <span class="offer-amount">97</span>
-        <span class="offer-period">pagamento único</span>
+    <div class="plans-grid">
+
+      <!-- PLANO STARTER -->
+      <div class="offer-card">
+        <div class="offer-name">MÉTODO GOLEIRO 2.0</div>
+        <div class="offer-price-row">
+          <span class="offer-currency">R$</span>
+          <span class="offer-amount">97</span>
+          <span class="offer-period">pagamento único</span>
+        </div>
+        <div class="offer-items">
+          <div class="offer-item">✓ Anamnese</div>
+          <div class="offer-item">✓ Avaliação Postural</div>
+          <div class="offer-item">✓ Treinos Personalizados</div>
+          <div class="offer-item">✓ App Completo</div>
+          <div class="offer-item">✓ WhatsApp com o Professor</div>
+          <div class="offer-item">✓ Garantia 7 Dias</div>
+          <div class="offer-item offer-item--full">✓ Planejamento estratégico para 30 dias</div>
+          <div class="offer-item offer-item--full">✓ Acesso vitalício aos treinos via PDF</div>
+        </div>
+        <a href="#comprar" class="buy-btn buy-btn--outline">COMEÇAR POR R$97</a>
+        <div class="offer-micro">🔒 Pagamento seguro · Garantia de 7 dias</div>
       </div>
-      <div class="offer-items">
-        <div class="offer-item">✓ Anamnese</div>
-        <div class="offer-item">✓ Avaliação Postural</div>
-        <div class="offer-item">✓ Treinos Personalizados</div>
-        <div class="offer-item">✓ App Completo</div>
-        <div class="offer-item">✓ WhatsApp com o Professor</div>
-        <div class="offer-item">✓ Garantia 7 Dias</div>
-        <div class="offer-item offer-item--full">✓ Planejamento estratégico para 30 dias</div>
-        <div class="offer-item offer-item--full">✓ Acesso vitalício aos treinos via PDF</div>
+
+      <!-- TEMPORADA COMPLETA -->
+      <div class="offer-card offer-card--featured">
+        <div class="offer-badge-top">⭐ MAIS COMPLETO</div>
+        <div class="offer-name">TEMPORADA COMPLETA</div>
+        <div class="offer-price-row">
+          <span class="offer-currency">R$</span>
+          <span class="offer-amount">797</span>
+          <span class="offer-period">/ ano</span>
+        </div>
+        <div class="offer-items">
+          <div class="offer-item offer-item--highlight">✓ Tudo do Método Goleiro 2.0</div>
+          <div class="offer-item offer-item--highlight">✓ Consulta com Nutricionista</div>
+          <div class="offer-item offer-item--highlight">✓ Progressão de treinos mensal</div>
+          <div class="offer-item offer-item--highlight">✓ Acompanhamento por 12 meses</div>
+          <div class="offer-item offer-item--full offer-item--highlight">✓ Suporte prioritário via WhatsApp</div>
+          <div class="offer-item offer-item--full offer-item--highlight">✓ Acesso vitalício aos treinos via PDF</div>
+        </div>
+        <a href="#temporada" class="buy-btn">QUERO A TEMPORADA COMPLETA</a>
+        <div class="offer-micro">🔒 Pagamento seguro · Garantia de 7 dias</div>
       </div>
-      <!-- TODO: substitua #comprar pelo link de pagamento real -->
-      <a href="#comprar" class="buy-btn">QUERO O PLANO STARTER — R$97</a>
-      <div class="offer-micro">🔒 Pagamento seguro · Garantia de 7 dias</div>
+
     </div>
   </section>
 
@@ -374,26 +399,49 @@ import Carousel from '../components/Carousel.astro';
     <h2 class="section-title">Pronto para ser um paredão?</h2>
     <p class="section-sub">Tudo que você precisa pra começar está aqui. Sem complicação.</p>
 
-    <div class="offer-card offer-card--final">
-      <div class="offer-name">PLANO STARTER</div>
-      <div class="offer-price-row">
-        <span class="offer-currency">R$</span>
-        <span class="offer-amount">97</span>
-        <span class="offer-period">pagamento único</span>
+    <div class="plans-grid">
+
+      <div class="offer-card">
+        <div class="offer-name">MÉTODO GOLEIRO 2.0</div>
+        <div class="offer-price-row">
+          <span class="offer-currency">R$</span>
+          <span class="offer-amount">97</span>
+          <span class="offer-period">pagamento único</span>
+        </div>
+        <div class="offer-items">
+          <div class="offer-item">✓ Anamnese</div>
+          <div class="offer-item">✓ Avaliação Postural</div>
+          <div class="offer-item">✓ Treinos Personalizados</div>
+          <div class="offer-item">✓ App Completo</div>
+          <div class="offer-item">✓ WhatsApp com o Professor</div>
+          <div class="offer-item">✓ Garantia 7 Dias</div>
+          <div class="offer-item offer-item--full">✓ Planejamento estratégico para 30 dias</div>
+          <div class="offer-item offer-item--full">✓ Acesso vitalício aos treinos via PDF</div>
+        </div>
+        <a href="#comprar" class="buy-btn buy-btn--outline buy-btn--pulse">COMEÇAR POR R$97</a>
+        <div class="offer-micro">🔒 Pagamento seguro · Garantia de 7 dias</div>
       </div>
-      <div class="offer-items">
-        <div class="offer-item">✓ Anamnese</div>
-        <div class="offer-item">✓ Avaliação Postural</div>
-        <div class="offer-item">✓ Treinos Personalizados</div>
-        <div class="offer-item">✓ App Completo</div>
-        <div class="offer-item">✓ WhatsApp com o Professor</div>
-        <div class="offer-item">✓ Garantia 7 Dias</div>
-        <div class="offer-item offer-item--full">✓ Planejamento estratégico para 30 dias</div>
-        <div class="offer-item offer-item--full">✓ Acesso vitalício aos treinos via PDF</div>
+
+      <div class="offer-card offer-card--featured">
+        <div class="offer-badge-top">⭐ MAIS COMPLETO</div>
+        <div class="offer-name">TEMPORADA COMPLETA</div>
+        <div class="offer-price-row">
+          <span class="offer-currency">R$</span>
+          <span class="offer-amount">797</span>
+          <span class="offer-period">/ ano</span>
+        </div>
+        <div class="offer-items">
+          <div class="offer-item offer-item--highlight">✓ Tudo do Método Goleiro 2.0</div>
+          <div class="offer-item offer-item--highlight">✓ Consulta com Nutricionista</div>
+          <div class="offer-item offer-item--highlight">✓ Progressão de treinos mensal</div>
+          <div class="offer-item offer-item--highlight">✓ Acompanhamento por 12 meses</div>
+          <div class="offer-item offer-item--full offer-item--highlight">✓ Suporte prioritário via WhatsApp</div>
+          <div class="offer-item offer-item--full offer-item--highlight">✓ Acesso vitalício aos treinos via PDF</div>
+        </div>
+        <a href="#temporada" class="buy-btn buy-btn--pulse">QUERO A TEMPORADA COMPLETA</a>
+        <div class="offer-micro">🔒 Pagamento seguro · Garantia de 7 dias</div>
       </div>
-      <!-- TODO: substitua #comprar pelo link de pagamento real -->
-      <a href="#comprar" class="buy-btn buy-btn--pulse">QUERO O PLANO STARTER — R$97</a>
-      <div class="offer-micro">🔒 Pagamento seguro · Garantia de 7 dias</div>
+
     </div>
 
     <div class="guarantee">
@@ -701,6 +749,38 @@ import Carousel from '../components/Carousel.astro';
 
   /* ── OFFER CARD ── */
   .offer-section { text-align: center; }
+  .plans-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 16px; width: 100%; max-width: 680px; margin: 0 auto;
+  }
+  @media (max-width: 560px) { .plans-grid { grid-template-columns: 1fr; } }
+
+  .offer-card--featured {
+    border-color: var(--neon);
+    box-shadow: 0 0 80px rgba(223,255,0,.12);
+    position: relative;
+  }
+  .offer-badge-top {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .62rem; font-weight: 700;
+    letter-spacing: .15em; text-transform: uppercase;
+    color: #0A0A0A; background: var(--neon);
+    padding: 5px 12px; border-radius: 99px;
+    display: inline-block; margin-bottom: 12px;
+  }
+  .offer-item--highlight {
+    color: var(--white);
+    border-color: rgba(223,255,0,.15);
+    background: rgba(223,255,0,.04);
+  }
+  .buy-btn--outline {
+    background: transparent;
+    border: 1px solid var(--neon);
+    color: var(--neon);
+    box-shadow: none;
+  }
+  .buy-btn--outline:hover { background: rgba(223,255,0,.08); transform: translateY(-2px); }
+
   .offer-card {
     width: 100%; max-width: 420px; margin: 0 auto;
     border: 1px solid rgba(223,255,0,.35); border-radius: 6px;
