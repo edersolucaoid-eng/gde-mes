@@ -1,0 +1,123 @@
+---
+---
+<div class="atmo"></div>
+<div class="atmo-2"></div>
+
+<div class="hero-strip reveal">
+  <div class="live-badge">
+    <div class="live-dot"></div>
+    14 Vagas Abertas · Turma 2026
+  </div>
+
+  <h1 class="headline">
+    O goleiro já escolheu ser diferente.<br />
+    <em>A partir de agora, o seu treino também precisa ser.</em>
+  </h1>
+
+  <p class="subheadline">
+    <strong>+1.200 goleiros já treinaram com o Método Goleiro 2.0.</strong> Musculação desenvolvida especificamente para goleiros de todos os níveis e idades. Força e explosão para se tornar um paredão nos jogos e peladas. Responda 4 perguntas e veja se você tem o perfil para a próxima turma.
+  </p>
+
+  <div class="stats-bar">
+    <div class="stat-cell">
+      <span class="stat-n">73K</span>
+      <span class="stat-l">Seguidores</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-n">+1.2K</span>
+      <span class="stat-l">Goleiros treinados</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-n">100%</span>
+      <span class="stat-l">Online</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .atmo {
+    position: fixed; top: -30vh; left: 50%; transform: translateX(-50%);
+    width: 140vw; height: 80vh;
+    background: radial-gradient(ellipse at center, rgba(223,255,0,.09) 0%, transparent 65%);
+    pointer-events: none; z-index: 0;
+  }
+  .atmo-2 {
+    position: fixed; bottom: -20vh; right: -20vw;
+    width: 80vw; height: 80vh;
+    background: radial-gradient(ellipse at center, rgba(223,255,0,.04) 0%, transparent 70%);
+    pointer-events: none; z-index: 0;
+  }
+
+  .hero-strip {
+    width: 100%; max-width: 680px;
+    padding: 56px 0 48px;
+    display: flex; flex-direction: column; align-items: center;
+    position: relative; z-index: 1;
+  }
+
+  .live-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .65rem; font-weight: 700; letter-spacing: .2em;
+    text-transform: uppercase; color: var(--neon);
+    background: var(--neon-dim);
+    border: 1px solid rgba(223,255,0,.2); border-radius: 3px;
+    padding: 5px 14px; margin-bottom: 28px;
+  }
+  .live-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--neon);
+    animation: blink 1.4s ease-in-out infinite;
+  }
+
+  .headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.9rem, 6.5vw, 3.8rem);
+    line-height: 1.1; letter-spacing: .01em;
+    text-align: center; color: var(--white); text-transform: uppercase;
+  }
+  .headline em {
+    font-style: normal; color: var(--neon); display: block;
+    text-shadow: 0 0 60px rgba(223,255,0,.4), 0 0 120px rgba(223,255,0,.15);
+    margin-top: 6px;
+  }
+  .slash {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3.2rem, 12vw, 6.5rem);
+    color: var(--muted); line-height: .95; display: block; text-align: center;
+  }
+
+  .subheadline {
+    margin-top: 24px;
+    font-size: clamp(1rem, 3vw, 1.2rem); font-weight: 400;
+    color: var(--gray); line-height: 1.6; text-align: center;
+    max-width: 520px; letter-spacing: .01em;
+  }
+  .subheadline strong { color: var(--white); font-weight: 700; }
+
+  .stats-bar {
+    margin-top: 32px; width: 100%;
+    display: grid; grid-template-columns: repeat(3,1fr);
+    border: 1px solid var(--border); border-radius: 6px;
+    overflow: hidden; background: var(--card);
+  }
+  .stat-cell {
+    display: flex; flex-direction: column; align-items: center;
+    padding: 16px 8px; gap: 3px;
+    border-right: 1px solid var(--border); position: relative;
+  }
+  .stat-cell:last-child { border-right: none; }
+  .stat-cell::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 2px; background: var(--neon); opacity: 0; transition: opacity .3s;
+  }
+  .stat-cell:hover::before { opacity: 1; }
+  .stat-n {
+    font-family: 'Bebas Neue', sans-serif; font-size: 2rem;
+    color: var(--neon); line-height: 1; letter-spacing: .02em;
+  }
+  .stat-l {
+    font-size: .72rem; font-weight: 600; color: var(--gray);
+    text-transform: uppercase; letter-spacing: .08em; text-align: center;
+  }
+</style>

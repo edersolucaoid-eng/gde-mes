@@ -1,0 +1,479 @@
+---
+---
+<div class="card reveal" id="quiz-card">
+
+  <div class="card-label">Avaliação de Perfil</div>
+
+  <div class="prog-row">
+    <div class="prog-track">
+      <div class="prog-fill" id="progress-fill"></div>
+    </div>
+    <div class="prog-label"><span id="answered-count">0</span>/4</div>
+  </div>
+
+  <div class="questions">
+
+    <!-- Q1 -->
+    <div class="question" data-q="1">
+      <div class="q-num">// 01 — Perfil</div>
+      <div class="q-text">Você é goleiro amador, profissional ou mãe/pai de goleiro?</div>
+      <div class="options row">
+        <div class="opt" data-q="1" data-v="amador"><div class="opt-box"></div><span class="opt-ico">🥅</span><span class="opt-label">Amador</span></div>
+        <div class="opt" data-q="1" data-v="profissional"><div class="opt-box"></div><span class="opt-ico">⭐</span><span class="opt-label">Profissional</span></div>
+        <div class="opt" data-q="1" data-v="mae_pai"><div class="opt-box"></div><span class="opt-ico">👨‍👩‍👦</span><span class="opt-label">Mãe / Pai</span></div>
+      </div>
+    </div>
+
+    <div class="qdiv"></div>
+
+    <!-- Q2 -->
+    <div class="question" data-q="2">
+      <div class="q-num">// 02 — Objetivo</div>
+      <div class="q-text">Qual é o seu principal objetivo como goleiro?</div>
+      <div class="options">
+        <div class="opt" data-q="2" data-v="explosao"><div class="opt-box"></div><span class="opt-ico">⚡</span><span class="opt-label">Ficar mais explosivo e veloz</span></div>
+        <div class="opt" data-q="2" data-v="forca"><div class="opt-box"></div><span class="opt-ico">💪</span><span class="opt-label">Ganhar força nos duelos</span></div>
+        <div class="opt" data-q="2" data-v="resistencia"><div class="opt-box"></div><span class="opt-ico">🔋</span><span class="opt-label">Melhorar resistência física</span></div>
+        <div class="opt" data-q="2" data-v="foco"><div class="opt-box"></div><span class="opt-ico">🎯</span><span class="opt-label">Evoluir meu desempenho geral</span></div>
+      </div>
+    </div>
+
+    <div class="qdiv"></div>
+
+    <!-- Q3 -->
+    <div class="question" data-q="3">
+      <div class="q-num">// 03 — Comprometimento</div>
+      <div class="q-text">O programa é 100% online — app + acompanhamento via WhatsApp. Você consegue se comprometer com pelo menos 3x por semana?</div>
+      <div class="options row">
+        <div class="opt" data-q="3" data-v="sim"><div class="opt-box"></div><span class="opt-ico">✅</span><span class="opt-label">Sim, consigo me comprometer</span></div>
+        <div class="opt" data-q="3" data-v="nao"><div class="opt-box"></div><span class="opt-ico">🚫</span><span class="opt-label">Não quero um programa online</span></div>
+      </div>
+    </div>
+
+    <div class="qdiv"></div>
+
+    <!-- Q4 -->
+    <div class="question" data-q="4">
+      <div class="q-num">// 04 — Investimento</div>
+      <div class="q-text">Nossos pacotes partem de R$300 — investimento único, sem mensalidade. Você está pronto para investir no seu desenvolvimento como goleiro?</div>
+      <div class="options">
+        <div class="opt" data-q="4" data-v="sim"><div class="opt-box"></div><span class="opt-ico">🚀</span><span class="opt-label">Sim, quero conhecer melhor o programa</span></div>
+        <div class="opt" data-q="4" data-v="nao"><div class="opt-box"></div><span class="opt-ico">🚫</span><span class="opt-label">Não é o meu momento</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SellFlux Capture Form (aparece quando qualificado) -->
+  <div class="capture-wrap" id="capture-wrap">
+    <div class="capture-heading">Preencha seus dados para receber o contato do professor via WhatsApp</div>
+    <form
+      method="post"
+      action="https://webhook.sellflux.app/v2/webhook/form/dd4b0c469c5da3d225bc29b22e4128c1?not_query=true&redirect_url=https%3A%2F%2Fgoleirodeelite.com"
+      class="sf-form"
+    >
+      <input type="hidden" name="custom_perfil" id="sf-perfil" value="" />
+      <input type="hidden" name="custom_estrutura" id="sf-estrutura" value="" />
+
+      <div class="sf-field">
+        <input type="text" id="name-2" name="name" placeholder="Seu nome" required />
+      </div>
+      <div class="sf-field">
+        <input type="email" id="email-2" name="email" placeholder="Seu melhor e-mail" required />
+      </div>
+      <div class="sf-phone">
+        <select id="ddi-2" class="sf-ddi"></select>
+        <input type="tel" id="tel-2" name="phone" data-phone-with-ddi="" maxlength="15" placeholder="(00) 00000-0000" required />
+      </div>
+      <a href="#" class="sf-submit" id="sf-submit-link">ENVIAR</a>
+      <div class="cta-micro">🔒 SEM SPAM · SEUS DADOS ESTÃO SEGUROS</div>
+      <script src="https://webhook.sellflux.app/v2/script_form.js" is:inline></script>
+    </form>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-wrap">
+    <!-- Disqualify box -->
+    <div class="dq-box" id="disqualify-box">
+      <div class="dq-head">Tudo certo — só um detalhe antes</div>
+      <div class="dq-item" id="dq-online">
+        <span class="dq-ico">📱</span>
+        <div><strong>O programa é 100% online — app + WhatsApp.</strong> Faz todo sentido querer entender melhor antes de decidir. Nosso time explica exatamente como funciona e tira todas as suas dúvidas.</div>
+      </div>
+      <div class="dq-item" id="dq-invest">
+        <span class="dq-ico">💪</span>
+        <div><strong>Plano de musculação exclusivo para goleiros a partir de R$300.</strong> Não é um treino genérico — é um programa desenvolvido especificamente para o seu perfil de goleiro, com acompanhamento individualizado.</div>
+      </div>
+      <div class="dq-q">Quando estiver pronto, volte e responda o quiz novamente.</div>
+      <div class="dq-back" id="dq-back-btn">← Revisar minhas respostas</div>
+    </div>
+
+    <!-- Main CTA (oculto quando form aparece) -->
+    <a href="#" class="cta-btn" id="cta-btn">
+      Falar com Especialista
+    </a>
+    <div class="cta-micro" id="cta-micro-main">🔒 SEM SPAM · SEUS DADOS ESTÃO SEGUROS</div>
+
+    <!-- Guarantee -->
+    <div class="guarantee">
+      <div class="guarantee-icon">🛡</div>
+      <div class="guarantee-body">
+        <div class="guarantee-title">Garantia de 7 Dias — Risco Zero</div>
+        <div class="guarantee-text">Se em 7 dias você sentir que o método não é para você, devolvemos 100% do investimento. Sem burocracia. Sem perguntas. O risco é 100% nosso.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<style>
+  .card {
+    width: 100%; max-width: 580px;
+    background: var(--card); border: 1px solid rgba(223,255,0,.25);
+    border-radius: 4px; padding: 40px 36px 52px;
+    position: relative; overflow: hidden;
+    box-shadow: 0 0 80px rgba(223,255,0,.07), 0 0 0 1px rgba(223,255,0,.05);
+  }
+  .card::before {
+    content: ''; position: absolute; top: 0; left: 0;
+    width: 100px; height: 3px; background: var(--neon);
+    box-shadow: 0 0 16px rgba(223,255,0,.6);
+  }
+  .card::after {
+    content: ''; position: absolute; top: 0; left: 0;
+    width: 3px; height: 100px; background: var(--neon);
+    box-shadow: 0 0 16px rgba(223,255,0,.6);
+  }
+
+  .card-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .68rem; font-weight: 700; letter-spacing: .18em;
+    text-transform: uppercase; color: var(--neon);
+    margin-bottom: 24px; display: flex; align-items: center; gap: 10px;
+  }
+  .card-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  .prog-row { display: flex; align-items: center; gap: 12px; margin-bottom: 32px; }
+  .prog-track { flex: 1; height: 3px; background: var(--border); border-radius: 99px; overflow: hidden; }
+  .prog-fill {
+    height: 100%; width: 0%; background: var(--neon);
+    border-radius: 99px; transition: width .5s cubic-bezier(.4,0,.2,1);
+    box-shadow: 0 0 8px var(--neon);
+  }
+  .prog-label {
+    font-family: 'JetBrains Mono', monospace; font-size: .65rem; color: var(--gray);
+  }
+  .prog-label span { color: var(--neon); }
+
+  .questions { display: flex; flex-direction: column; gap: 28px; }
+  .question  { display: flex; flex-direction: column; gap: 8px; }
+  .q-num {
+    font-family: 'JetBrains Mono', monospace; font-size: .7rem;
+    font-weight: 700; color: var(--neon); letter-spacing: .18em; text-transform: uppercase;
+  }
+  .q-text { font-size: clamp(1.2rem, 3.5vw, 1.5rem); font-weight: 700; color: var(--white); line-height: 1.3; }
+
+  .options { display: flex; flex-direction: column; gap: 6px; margin-top: 6px; }
+  .options.row { flex-direction: row; flex-wrap: wrap; }
+
+  .opt {
+    display: flex; align-items: center; gap: 12px;
+    border: 1px solid var(--border); border-radius: 3px;
+    padding: 16px 18px; cursor: pointer;
+    transition: border-color .15s, background .15s;
+    user-select: none; -webkit-tap-highlight-color: transparent;
+    flex: 1 1 auto; min-width: 130px; background: transparent;
+  }
+  .opt:hover { border-color: rgba(223,255,0,.35); background: var(--neon-dim); }
+  .opt.selected { border-color: var(--neon); background: var(--selected); }
+  .opt.selected .opt-box { background: var(--neon); border-color: var(--neon); }
+  .opt.selected .opt-box::after { opacity: 1; }
+  .opt.selected .opt-label { color: var(--neon); }
+
+  .opt-box {
+    width: 18px; height: 18px; border: 1.5px solid var(--muted);
+    border-radius: 2px; flex-shrink: 0;
+    display: grid; place-items: center; transition: all .15s;
+  }
+  .opt-box::after {
+    content: ''; width: 5px; height: 9px;
+    border-right: 2px solid #0a0a0a; border-bottom: 2px solid #0a0a0a;
+    transform: rotate(45deg) translate(-1px,-1px); opacity: 0; transition: opacity .12s;
+  }
+  .opt-ico  { font-size: 1rem; flex-shrink: 0; }
+  .opt-label { font-size: 1rem; font-weight: 600; color: var(--white); transition: color .15s; }
+
+  .qdiv { height: 1px; background: var(--border); }
+
+  /* Nome input */
+  .nome-input {
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 13px 16px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    outline: none;
+    transition: border-color .15s;
+    margin-top: 6px;
+    letter-spacing: .02em;
+  }
+  .nome-input::placeholder { color: var(--muted); font-weight: 400; }
+  .nome-input:focus { border-color: var(--neon); }
+  .nome-input.filled { border-color: rgba(223,255,0,.4); }
+
+  /* Disqualify */
+  .dq-box {
+    display: none; flex-direction: column; gap: 14px;
+    border: 1px solid rgba(255,60,60,.3); background: rgba(255,60,60,.06);
+    border-radius: 4px; padding: 22px 20px;
+    margin-bottom: 14px; animation: fadeUp .3s ease;
+  }
+  .dq-box.visible { display: flex; }
+  .dq-head { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: .04em; color: var(--white); }
+  .dq-item {
+    display: flex; gap: 10px; font-size: .88rem; color: var(--gray);
+    line-height: 1.6; padding: 12px; border: 1px solid var(--border);
+    border-radius: 3px; background: rgba(0,0,0,.3);
+  }
+  .dq-item.hidden { display: none; }
+  .dq-item strong { color: var(--white); font-weight: 700; display: block; }
+  .dq-ico { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+  .dq-q { font-size: .9rem; font-weight: 700; color: var(--white); text-align: center; }
+  .dq-confirm {
+    width: 100%; padding: 14px; background: transparent;
+    border: 1px solid var(--neon); color: var(--neon);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: .95rem; font-weight: 800; letter-spacing: .06em;
+    text-transform: uppercase; border-radius: 3px; cursor: pointer; transition: background .15s;
+  }
+  .dq-confirm:hover { background: var(--neon-dim); }
+  .dq-back {
+    text-align: center; font-size: .75rem; color: var(--gray);
+    cursor: pointer; font-family: 'JetBrains Mono', monospace; transition: color .15s;
+  }
+  .dq-back:hover { color: var(--white); }
+
+  /* CTA */
+  .cta-wrap { margin-top: 32px; }
+  .cta-btn {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    width: 100%; padding: 20px 24px; background: var(--neon);
+    color: #0a0a0a; font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem; letter-spacing: .08em; text-transform: uppercase;
+    border: none; border-radius: 3px; cursor: pointer; text-decoration: none;
+    transition: background .15s, transform .1s;
+    animation: pulse 2.6s ease-in-out infinite;
+    box-shadow: 0 0 0 0 rgba(223,255,0,.5), 0 8px 40px rgba(223,255,0,.2);
+    line-height: 1;
+  }
+  .cta-btn:hover { background: #eeff22; transform: translateY(-2px); animation: none; }
+  .cta-btn:active { transform: translateY(0); }
+
+  .cta-micro {
+    margin-top: 10px; text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .62rem; color: var(--gray); letter-spacing: .08em;
+  }
+
+  .guarantee {
+    margin-top: 16px;
+    display: flex; align-items: flex-start; gap: 12px;
+    border: 1px solid rgba(223,255,0,.15); border-radius: 3px;
+    padding: 16px; background: rgba(223,255,0,.03);
+  }
+  .guarantee-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 1px; }
+  .guarantee-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: .88rem; font-weight: 800; color: var(--white);
+    text-transform: uppercase; letter-spacing: .05em; margin-bottom: 4px;
+  }
+  .guarantee-text { font-size: .82rem; color: var(--gray); line-height: 1.6; }
+
+  /* ── SellFlux Capture Form ── */
+  .capture-wrap {
+    display: none;
+    margin-top: 28px;
+    border: 1px solid rgba(223,255,0,.25);
+    border-radius: 4px;
+    padding: 24px 20px;
+    background: rgba(223,255,0,.03);
+    animation: fadeUp .4s ease;
+  }
+  .capture-wrap.visible { display: block; }
+
+  .capture-heading {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem; font-weight: 700;
+    color: var(--neon); text-transform: uppercase;
+    letter-spacing: .06em; margin-bottom: 18px;
+  }
+
+  .sf-form { display: flex; flex-direction: column; gap: 12px; }
+
+  .sf-field input,
+  .sf-phone input,
+  .sf-phone select {
+    width: 100%;
+    background: #161616;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    padding: 12px 14px;
+    outline: none;
+    transition: border-color .2s;
+  }
+  .sf-field input:focus,
+  .sf-phone input:focus { border-color: var(--neon); }
+  .sf-field input::placeholder,
+  .sf-phone input::placeholder { color: var(--gray); }
+
+  .sf-phone { display: flex; gap: 0; }
+  .sf-phone select {
+    max-width: 90px;
+    border-right: none;
+    border-radius: 3px 0 0 3px;
+    background: #1a1a1a;
+    color: var(--white);
+    cursor: pointer;
+  }
+  .sf-phone input {
+    border-radius: 0 3px 3px 0;
+    flex: 1;
+  }
+
+  .sf-submit {
+    display: block;
+    width: 100%;
+    background: var(--neon);
+    color: #0A0A0A;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: .08em;
+    padding: 16px;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: background .15s, transform .15s;
+    box-shadow: 0 0 20px rgba(223,255,0,.3);
+    text-align: center;
+    text-decoration: none;
+  }
+  .sf-submit:hover { background: #eeff22; transform: translateY(-2px); }
+  .sf-submit:active { transform: translateY(0); }
+
+  @media (max-width: 480px) {
+    .card { padding: 28px 18px 36px; }
+    .options.row { flex-direction: column; }
+    .cta-btn { font-size: 1.15rem; }
+  }
+</style>
+
+<script>
+  const answers: Record<string, string> = {};
+  const TOTAL = 4;
+
+  function selectOpt(el: HTMLElement) {
+    const q = el.dataset.q!;
+    document.querySelectorAll<HTMLElement>(`.opt[data-q="${q}"]`).forEach(o => o.classList.remove('selected'));
+    el.classList.add('selected');
+    answers[q] = el.dataset.v!;
+    updateProgress();
+    scrollNext(parseInt(q));
+  }
+
+  function updateProgress() {
+    const count = Object.keys(answers).length;
+    document.getElementById('answered-count')!.textContent = String(count);
+    (document.getElementById('progress-fill') as HTMLElement).style.width = (count / TOTAL * 100) + '%';
+  }
+
+  function scrollNext(q: number) {
+    if (q < 4) {
+      const next = document.querySelector<HTMLElement>(`.question[data-q="${q + 1}"]`);
+      if (next) setTimeout(() => next.scrollIntoView({ behavior: 'smooth', block: 'center' }), 200);
+    }
+  }
+
+  function isQualified() { return answers['3'] === 'sim' && answers['4'] === 'sim'; }
+
+  function showCaptureForm() {
+    const wrap = document.getElementById('capture-wrap')!;
+    const ctaBtn = document.getElementById('cta-btn') as HTMLElement;
+    const ctaMicro = document.getElementById('cta-micro-main') as HTMLElement;
+    // Preenche campos ocultos com respostas do quiz
+    (document.getElementById('sf-perfil') as HTMLInputElement).value = answers['1'] || '';
+    (document.getElementById('sf-estrutura') as HTMLInputElement).value = answers['2'] || '';
+    // Mostra formulário, oculta CTA
+    wrap.classList.add('visible');
+    ctaBtn.style.display = 'none';
+    ctaMicro.style.display = 'none';
+    setTimeout(() => wrap.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
+    // Foca no primeiro campo
+    setTimeout(() => (document.getElementById('name-2') as HTMLInputElement)?.focus(), 400);
+  }
+
+  // Wire up options
+  document.querySelectorAll<HTMLElement>('.opt').forEach(opt => {
+    opt.setAttribute('role', 'button');
+    opt.setAttribute('tabindex', '0');
+    opt.addEventListener('click', () => selectOpt(opt));
+    opt.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectOpt(opt); }
+    });
+  });
+
+  // CTA click
+  document.getElementById('cta-btn')!.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const count = Object.keys(answers).length;
+    if (count < TOTAL) {
+      const card = document.getElementById('quiz-card')!;
+      card.style.animation = 'shake .4s ease';
+      setTimeout(() => card.style.animation = '', 400);
+      for (let i = 1; i <= 4; i++) {
+        if (!answers[String(i)]) {
+          document.querySelector<HTMLElement>(`.question[data-q="${i}"]`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          break;
+        }
+      }
+      return;
+    }
+
+    if (isQualified()) { showCaptureForm(); return; }
+
+    const box = document.getElementById('disqualify-box')!;
+    document.getElementById('dq-online')!.classList.toggle('hidden', answers['3'] === 'sim');
+    document.getElementById('dq-invest')!.classList.toggle('hidden', answers['4'] === 'sim');
+    box.classList.add('visible');
+    box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    const btn = document.getElementById('cta-btn') as HTMLElement;
+    btn.style.opacity = '.3';
+    btn.style.pointerEvents = 'none';
+  });
+
+  document.getElementById('dq-back-btn')!.addEventListener('click', () => {
+    document.getElementById('disqualify-box')!.classList.remove('visible');
+    const btn = document.getElementById('cta-btn') as HTMLElement;
+    btn.style.opacity = '1';
+    btn.style.pointerEvents = 'auto';
+    document.getElementById('quiz-card')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  // Dispara form_submit no clique no link ENVIAR e submete o formulário
+  document.getElementById('sf-submit-link')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    const form = document.querySelector<HTMLFormElement>('.sf-form');
+    if (!form || !form.checkValidity()) { form?.reportValidity(); return; }
+    (window as any).dataLayer = (window as any).dataLayer || [];
+    (window as any).dataLayer.push({ event: 'form_submit', form_name: 'quiz_qualificacao', lead_perfil: answers['1'], lead_objetivo: answers['2'] });
+    form.submit();
+  });
+</script>

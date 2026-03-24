@@ -1,0 +1,114 @@
+---
+---
+<div class="car-section reveal" style="transition-delay:.3s">
+  <div class="section-tag">Resultados</div>
+  <div class="car-heading">Resultado no corpo e na performance</div>
+
+  <div class="car-wrapper">
+    <div class="car-track" id="carousel-track">
+      <div class="car-slide"><img src="/images/WhatsApp Image 2026-03-20 at 23.47.32.jpeg" alt="Resultado Método Goleiro 2.0" /></div>
+      <div class="car-slide"><img src="/images/WhatsApp Image 2026-03-20 at 23.45.35.jpeg" alt="Resultado Método Goleiro 2.0" /></div>
+      <div class="car-slide"><img src="/images/WhatsApp Image 2026-03-20 at 23.45.35 (1).jpeg" alt="Resultado Método Goleiro 2.0" /></div>
+      <div class="car-slide"><img src="/images/WhatsApp Image 2026-03-20 at 23.45.35 (2).jpeg" alt="Resultado Método Goleiro 2.0" /></div>
+      <div class="car-slide"><img src="/images/WhatsApp Image 2026-03-20 at 23.45.36.jpeg" alt="Resultado Método Goleiro 2.0" /></div>
+      <div class="car-slide"><img src="/images/WhatsApp Image 2026-03-20 at 23.45.36 (1).jpeg" alt="Resultado Método Goleiro 2.0" /></div>
+      <div class="car-slide"><img src="/images/WhatsApp Image 2026-03-20 at 23.45.36 (2).jpeg" alt="Resultado Método Goleiro 2.0" /></div>
+      <div class="car-slide"><img src="/images/WhatsApp Image 2026-03-20 at 23.45.37.jpeg" alt="Resultado Método Goleiro 2.0" /></div>
+      <div class="car-slide"><img src="/images/WhatsApp Image 2026-03-20 at 23.45.37 (1).jpeg" alt="Resultado Método Goleiro 2.0" /></div>
+      <div class="car-slide"><img src="/images/WhatsApp Image 2026-03-20 at 23.45.37 (2).jpeg" alt="Resultado Método Goleiro 2.0" /></div>
+      <div class="car-slide"><img src="/images/WhatsApp Image 2026-03-20 at 23.45.37 (3).jpeg" alt="Resultado Método Goleiro 2.0" /></div>
+      <div class="car-slide"><img src="/images/WhatsApp Image 2026-03-20 at 23.45.37 (4).jpeg" alt="Resultado Método Goleiro 2.0" /></div>
+    </div>
+    <button class="car-btn car-prev" id="car-prev" aria-label="Anterior">&#8592;</button>
+    <button class="car-btn car-next" id="car-next" aria-label="Próximo">&#8594;</button>
+  </div>
+
+  <div class="car-dots" id="car-dots">
+    <button class="dot active"></button>
+    <button class="dot"></button>
+    <button class="dot"></button>
+    <button class="dot"></button>
+    <button class="dot"></button>
+    <button class="dot"></button>
+    <button class="dot"></button>
+    <button class="dot"></button>
+    <button class="dot"></button>
+    <button class="dot"></button>
+    <button class="dot"></button>
+    <button class="dot"></button>
+  </div>
+</div>
+
+<style>
+  .car-section { width: 100%; max-width: 580px; display: flex; flex-direction: column; }
+
+  .car-heading {
+    font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem;
+    letter-spacing: .04em; color: var(--white); margin-bottom: 14px;
+  }
+
+  .car-wrapper { position: relative; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+  .car-track { display: flex; transition: transform .5s cubic-bezier(.4,0,.2,1); will-change: transform; }
+  .car-slide { flex: 0 0 100%; aspect-ratio: 3/4; overflow: hidden; background: #080808; }
+  .car-slide img {
+    width: 100%; height: 100%; object-fit: cover;
+    object-position: center center; display: block; transition: transform .6s ease;
+  }
+  .car-slide img:hover { transform: scale(1.04); }
+
+  .car-wrapper::before,
+  .car-wrapper::after {
+    content: ''; position: absolute; top: 0; bottom: 0; width: 48px; z-index: 2; pointer-events: none;
+  }
+  .car-wrapper::before { left: 0; background: linear-gradient(to right, rgba(10,10,10,.7), transparent); }
+  .car-wrapper::after  { right: 0; background: linear-gradient(to left, rgba(10,10,10,.7), transparent); }
+
+  .car-btn {
+    position: absolute; top: 50%; transform: translateY(-50%); z-index: 3;
+    background: rgba(17,17,17,.9); border: 1px solid var(--border); color: var(--white);
+    width: 44px; height: 44px; border-radius: 2px; cursor: pointer;
+    font-size: .95rem; display: grid; place-items: center;
+    transition: all .15s; backdrop-filter: blur(8px);
+  }
+  .car-btn:hover { border-color: var(--neon); color: var(--neon); }
+  .car-prev { left: 10px; }
+  .car-next { right: 10px; }
+
+  .car-dots { display: flex; justify-content: center; gap: 5px; margin-top: 12px; flex-wrap: wrap; }
+  .dot {
+    width: 6px; height: 6px; border-radius: 1px;
+    border: none; background: var(--muted); cursor: pointer;
+    transition: all .25s; padding: 0;
+  }
+  .dot.active { background: var(--neon); width: 22px; box-shadow: 0 0 6px var(--neon); }
+</style>
+
+<script>
+  const TOTAL = 12;
+  let current = 0;
+  let autoTimer: number;
+
+  function render() {
+    (document.getElementById('carousel-track') as HTMLElement).style.transform = `translateX(-${current * 100}%)`;
+    document.querySelectorAll('#car-dots .dot').forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function move(dir: number) { current = (current + dir + TOTAL) % TOTAL; render(); reset(); }
+  function goTo(idx: number) { current = idx; render(); reset(); }
+  function reset() { clearInterval(autoTimer); autoTimer = window.setInterval(() => move(1), 3500); }
+
+  document.getElementById('car-prev')!.addEventListener('click', () => move(-1));
+  document.getElementById('car-next')!.addEventListener('click', () => move(1));
+  document.querySelectorAll('#car-dots .dot').forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+
+  // Touch swipe
+  let touchX = 0;
+  const track = document.getElementById('carousel-track')!;
+  track.addEventListener('touchstart', e => { touchX = (e as TouchEvent).touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const diff = touchX - (e as TouchEvent).changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) move(diff > 0 ? 1 : -1);
+  });
+
+  reset();
+</script>
